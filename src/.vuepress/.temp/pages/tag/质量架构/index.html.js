@@ -1,0 +1,3 @@
+import comp from "/Users/swtywang/Coding/05 我的博客/my-docs-new/src/.vuepress/.temp/pages/tag/质量架构/index.html.vue"
+const data = JSON.parse("{\"path\":\"/tag/%E8%B4%A8%E9%87%8F%E6%9E%B6%E6%9E%84/\",\"title\":\"标签: 质量架构\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"标签: 质量架构\",\"dir\":{\"index\":false},\"index\":false,\"feed\":false,\"sitemap\":false,\"blog\":{\"type\":\"category\",\"name\":\"质量架构\",\"key\":\"tag\"},\"layout\":\"BlogCategory\",\"gitInclude\":[]},\"headers\":[],\"git\":{},\"readingTime\":{\"minutes\":0,\"words\":0},\"filePathRelative\":null,\"excerpt\":\"\"}")
+export { comp, data }

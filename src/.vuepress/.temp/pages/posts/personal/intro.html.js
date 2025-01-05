@@ -1,0 +1,16 @@
+import comp from "/Users/swtywang/Coding/05 我的博客/my-docs-new/src/.vuepress/.temp/pages/posts/personal/intro.html.vue"
+const data = JSON.parse("{\"path\":\"/posts/personal/intro.html\",\"title\":\"About me\",\"lang\":\"zh-CN\",\"frontmatter\":{\"layout\":\"Post\",\"headerImage\":\"/img/in-post/2021-12-24/header.jpg\",\"useHeaderImage\":true,\"headerMask\":\"rgba(40, 57, 101, .4)\",\"title\":\"About me\",\"gitInclude\":[],\"description\":\"QA Career -用例状态机.drawio (1)-用例状态机.drawio (1) Publications also see Google Scholar Image 1 High-efficiency endpoint detection in optical fiber perimeter security X Huang, Y Wang ...\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://mister-hope.github.io/posts/personal/intro.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"swtywang's homepage\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"About me\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"QA Career -用例状态机.drawio (1)-用例状态机.drawio (1) Publications also see Google Scholar Image 1 High-efficiency endpoint detection in optical fiber perimeter security X Huang, Y Wang ...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://swtywang.fun/minio/blog/c70cdff8246b433ca484db077f66a498.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"About me\\\",\\\"image\\\":[\\\"https://swtywang.fun/minio/blog/c70cdff8246b433ca484db077f66a498.png\\\"],\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"swtywang\\\",\\\"url\\\":\\\"https:www.baidu.com\\\"}]}\"]]},\"headers\":[{\"level\":2,\"title\":\"QA Career\",\"slug\":\"qa-career\",\"link\":\"#qa-career\",\"children\":[]},{\"level\":2,\"title\":\"Publications\",\"slug\":\"publications\",\"link\":\"#publications\",\"children\":[]},{\"level\":2,\"title\":\"Patents\",\"slug\":\"patents\",\"link\":\"#patents\",\"children\":[]}],\"readingTime\":{\"minutes\":2.19,\"words\":658},\"filePathRelative\":\"posts/personal/intro.md\",\"excerpt\":\"<h2>QA Career</h2>\\n<p><a target=\\\"_blank\\\" href=\\\"https://www.baidu.com\\\"><img src=\\\"https://swtywang.fun/minio/blog/f0e6cc16eb24ad684ad34fbccca80356.webp\\\" style=\\\"width:40px; height:40px;margin:0px;border-radius:50%;display:inline;border-radius:100%\\\"></a> <a target=\\\"_blank\\\" href=\\\"https://www.maoyan.com\\\"> <img src=\\\"https://swtywang.fun/minio/assets/maoyan_icon.ico\\\" style=\\\"width:40px; height:40px;margin:0px;border-radius:50%;display:inline;border-radius:100%\\\"></a> <a target=\\\"_blank\\\" href=\\\"https://www.bytedance.com/zh/\\\"><img src=\\\"https://swtywang.fun/minio/blog/806e2c7b48ed4a4f74b8ff487cfe45c4.webp\\\" style=\\\"width:40px; height:40px;display:inline;margin:0px;border-radius:100%\\\"></a></p>\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
