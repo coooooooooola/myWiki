@@ -1,37 +1,61 @@
 {
-  "hash": "bc1b7639",
-  "configHash": "f5f48ad2",
-  "lockfileHash": "e2475db0",
-  "browserHash": "e86eca3c",
+  "hash": "b5144317",
+  "configHash": "23b45524",
+  "lockfileHash": "ad7837c9",
+  "browserHash": "bf19735e",
   "optimized": {
+    "markmap-lib": {
+      "src": "../../../../node_modules/.pnpm/markmap-lib@0.18.5_markmap-common@0.18.5/node_modules/markmap-lib/dist/browser/index.mjs",
+      "file": "markmap-lib.js",
+      "fileHash": "8fe5d600",
+      "needsInterop": false
+    },
+    "markmap-toolbar": {
+      "src": "../../../../node_modules/.pnpm/markmap-toolbar@0.18.5_markmap-common@0.18.5/node_modules/markmap-toolbar/dist/index.mjs",
+      "file": "markmap-toolbar.js",
+      "fileHash": "ff2bcdb5",
+      "needsInterop": false
+    },
+    "markmap-view": {
+      "src": "../../../../node_modules/.pnpm/markmap-view@0.18.5_markmap-common@0.18.5/node_modules/markmap-view/dist/index.js",
+      "file": "markmap-view.js",
+      "fileHash": "7d13bd93",
+      "needsInterop": false
+    },
     "@vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.6.8/node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "eecd5dc5",
+      "fileHash": "bd276ffe",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../../node_modules/.pnpm/@vuepress+shared@2.0.0-rc.19/node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "3f38737f",
+      "fileHash": "1f794fb7",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.5.13/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "7905dde2",
+      "fileHash": "aa9a7266",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../../node_modules/.pnpm/vue-router@4.5.0_vue@3.5.13/node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "3c2d3cdc",
+      "fileHash": "8e8d424a",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-V4225VFU": {
+      "file": "chunk-V4225VFU.js"
+    },
     "chunk-JN5NFW2R": {
       "file": "chunk-JN5NFW2R.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
     }
   }
 }

@@ -1,10 +1,9 @@
 import { hopeTheme } from "vuepress-theme-hope";
-
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  // hostname: "https://mister-hope.github.io",
+  hostname: "swtywang",
 
   author: {
     name: "swtywang",
@@ -18,7 +17,7 @@ export default hopeTheme({
   // repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
-
+  darkmode:"enable",
   // 导航栏
   navbar,
 
@@ -71,6 +70,7 @@ export default hopeTheme({
     imgSize: true,
     include: true,
     mark: true,
+    markmap:true,
     plantuml: true,
     spoiler: true,
     stylize: [
@@ -91,7 +91,10 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
-
+    math: {
+        type: "katex", // 或 'mathjax'
+    },
+    highlighter: "shiki"
     // 取消注释它们如果你需要 TeX 支持
     // markdownMath: {
     //   // 启用前安装 katex
@@ -133,6 +136,8 @@ export default hopeTheme({
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
+    // 水印插件配置
+    watermark: false,
 
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！

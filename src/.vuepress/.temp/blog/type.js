@@ -1,2 +1,13 @@
-export const typesMap = {"article":{"/":{"path":"/article/","indexes":[29,30,31,17,18,2,19,42,20,21,40,3,4,5,6,7,32,8,26,33,22,9,10,11,23,12,37,13,34,24,38,27,28,14,25,15,35,1,16,41,36,39,0,43]}},"star":{"/":{"path":"/star/","indexes":[]}},"timeline":{"/":{"path":"/timeline/","indexes":[29,30,31,17,18,2,19,42,20,21,40,3,4,5,6,7,32,8,26,33,22,9,10,11,23,12,37,13,34,24,38,27,28,14,25,15,35,1,16,41,36,39,0]}}};
+export const typesMap = {"article":{"/":{"path":"/article/","indexes":[2,3,4,5,6,14,7,32,8,9,30,15,16,17,18,19,20,21,33,22,34,41,10,23,24,25,11,26,38,27,35,12,39,42,43,28,13,29,36,1,31,37,40,0,44]}},"star":{"/":{"path":"/star/","indexes":[]}},"timeline":{"/":{"path":"/timeline/","indexes":[2,3,4,5,6,14,7,32,8,9,30,15,16,17,18,19,20,21,33,22,34,41,10,23,24,25,11,26,38,27,35,12,39,42,43,28,13,29,36,1,31,37,40,0]}}};
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept();
+  if (__VUE_HMR_RUNTIME__.updateBlogType)
+    __VUE_HMR_RUNTIME__.updateBlogType(typesMap);
+}
+
+if (import.meta.hot)
+  import.meta.hot.accept(({ typesMap }) => {
+    __VUE_HMR_RUNTIME__.updateBlogType(typesMap);
+  });
 

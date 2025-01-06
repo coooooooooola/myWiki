@@ -1,8 +1,7 @@
 ---
 title: 质量架构 -  Java代码覆盖率
 date: 2024-02-11
-headerImage: /img/in-post/2021-12-24/header.jpg
-useHeaderImage: false
+cover: /assets/images/cover2.jpg
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
 tags:

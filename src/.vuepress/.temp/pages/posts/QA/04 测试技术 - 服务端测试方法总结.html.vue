@@ -1,10 +1,10 @@
-<template><div><h2 id="服务端在测什么" tabindex="-1"><a class="header-anchor" href="#服务端在测什么"><span>服务端在测什么</span></a></h2>
+<template><div><h2 id="一、微服务架构" tabindex="-1"><a class="header-anchor" href="#一、微服务架构"><span>一、微服务架构</span></a></h2>
 <blockquote>
-<p>微服务已成为主流的系统架构，只有对整体架构有了一定了解后，QA 才能更清楚需要测试什么，在哪些地方会存在风险。</p>
+<p>微服务已成为主流的系统架构，只有对整体架构有了一定了解后，才能更清楚需要测试什么，在哪些地方会存在风险。</p>
 </blockquote>
 <p>下图展示了微服务的全景组成，也很清晰的展示了一条请求的完整链路。各大互联网公司都会在此基础上开发更加定制化的组件。</p>
 <figure><img src="https://swtywang.fun/minio/blog/8142ce5cb9e65c10c6e24c70ca3e9cfc.webp" alt="Spring Cloud微服务架构图" tabindex="0" loading="lazy"><figcaption>Spring Cloud微服务架构图</figcaption></figure>
-<h3 id="服务网关" tabindex="-1"><a class="header-anchor" href="#服务网关"><span>服务网关</span></a></h3>
+<h3 id="_1-1-服务网关" tabindex="-1"><a class="header-anchor" href="#_1-1-服务网关"><span>1.1 服务网关</span></a></h3>
 <blockquote>
 <p>Shepherd：<a href="https://tech.meituan.com/2021/05/20/shepherd-api-gateway.html" target="_blank" rel="noopener noreferrer">https://tech.meituan.com/2021/05/20/shepherd-api-gateway.html</a></p>
 </blockquote>
@@ -17,7 +17,7 @@
 <blockquote>
 <p>API 网关是公司的基础层服务，业务 RD 会在此配置接口信息、限流降级等。</p>
 </blockquote>
-<h3 id="服务治理平台" tabindex="-1"><a class="header-anchor" href="#服务治理平台"><span>服务治理平台</span></a></h3>
+<h3 id="_1-2-服务治理平台" tabindex="-1"><a class="header-anchor" href="#_1-2-服务治理平台"><span>1.2 服务治理平台</span></a></h3>
 <blockquote>
 <p>OCTO：<a href="https://tech.meituan.com/2021/03/08/octo-2.0-service-mesh.html" target="_blank" rel="noopener noreferrer">https://tech.meituan.com/2021/03/08/octo-2.0-service-mesh.html</a></p>
 <p><a href="https://juejin.cn/post/7251501762817065016" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/7251501762817065016</a></p>
@@ -31,19 +31,17 @@
 <li>测试环境管理</li>
 </ul>
 </blockquote>
-<h3 id="springboot-存储-中间件" tabindex="-1"><a class="header-anchor" href="#springboot-存储-中间件"><span>SpringBoot/存储/中间件</span></a></h3>
+<h3 id="_1-3-springboot-存储-中间件" tabindex="-1"><a class="header-anchor" href="#_1-3-springboot-存储-中间件"><span>1.3 SpringBoot/存储/中间件</span></a></h3>
 <p>这是业务逻辑的实现，SpringBoot 通常会分为：</p>
-<ul>
-<li>Controller：流量入口，包含参数处理、权限控制、数据转化等</li>
-<li>Biz/Service：实现核心业务逻辑。Service 层会实现因业务域内的数据处理与事务控制，通常涉及与微服务系统、dao 层、LocalCache、分布式缓存、OSS、第三方 API 等众多组件的交互。</li>
-<li>Dao：主要提供数据操作接口</li>
-<li>Cron：定时任务</li>
-<li>Config：常用组件的配置</li>
-<li>Model/Domain：数据实体定义</li>
-<li>Common：通用工具</li>
-<li>Export：接口定义层</li>
-</ul>
-<p>测试需要关注的点：<a href="https://tech.qimao.com/fu-wu-duan-ce-shi-zhu-yi-dian-pou-xi/" target="_blank" rel="noopener noreferrer">https://tech.qimao.com/fu-wu-duan-ce-shi-zhu-yi-dian-pou-xi/</a></p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>- Controller：流量入口，包含参数处理、权限控制、数据转化等</span></span>
+<span class="line"><span>- Biz/Service：实现核心业务逻辑。Service 层会实现因业务域内的数据处理与事务控制，通常涉及与微服务系统、dao 层、LocalCache、分布式缓存、OSS、第三方 API 等众多组件的交互。</span></span>
+<span class="line"><span>- Dao：主要提供数据操作接口</span></span>
+<span class="line"><span>- Cron：定时任务</span></span>
+<span class="line"><span>- Config：常用组件的配置</span></span>
+<span class="line"><span>- Model/Domain：数据实体定义</span></span>
+<span class="line"><span>- Common：通用工具</span></span>
+<span class="line"><span>- Export：接口定义层</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>测试需要关注的点：<a href="https://tech.qimao.com/fu-wu-duan-ce-shi-zhu-yi-dian-pou-xi/" target="_blank" rel="noopener noreferrer">https://tech.qimao.com/fu-wu-duan-ce-shi-zhu-yi-dian-pou-xi/</a></p>
 <ol>
 <li>核心功能正常，是否与接口文档一致</li>
 <li>数据流转正确（增-&gt;查-&gt;改-&gt;查-&gt;删-&gt;查）</li>
@@ -56,11 +54,11 @@
 </ul>
 </li>
 </ol>
-<h3 id="ci-cd" tabindex="-1"><a class="header-anchor" href="#ci-cd"><span>CI/CD</span></a></h3>
+<h3 id="_1-4-ci-cd" tabindex="-1"><a class="header-anchor" href="#_1-4-ci-cd"><span>1.4 CI/CD</span></a></h3>
 <p>&quot;变更管控&quot;也是预防线上故障的一大专项，通常会依托于 devOps 流水线以及各个原子能力。</p>
-<h3 id="日志管理-链路追踪" tabindex="-1"><a class="header-anchor" href="#日志管理-链路追踪"><span>日志管理/链路追踪</span></a></h3>
+<h3 id="_1-5-日志管理-链路追踪" tabindex="-1"><a class="header-anchor" href="#_1-5-日志管理-链路追踪"><span>1.5 日志管理/链路追踪</span></a></h3>
 <blockquote>
-<p>熟练使用各种运维工具也是很有帮助的</p>
+<p>熟练使用各种运维工具也很有帮助</p>
 </blockquote>
 <ul>
 <li>ELK 日志平台可以让我们快速定位 bug 或者验证某个功能点（比如很多第三方请求是否参数正确）</li>
@@ -68,65 +66,7 @@
 <li>Promethus+Grafana 可以关注业务/机器数据（上线观测、故障排查、压测观察等场景非常有用）</li>
 <li>traceId 在微服务中非常重要，可以根据它生成调用链路，辅助我们更加精准的测试</li>
 </ul>
-<h2 id="服务端测试流程" tabindex="-1"><a class="header-anchor" href="#服务端测试流程"><span>服务端测试流程</span></a></h2>
-<h3 id="测试前" tabindex="-1"><a class="header-anchor" href="#测试前"><span>测试前：</span></a></h3>
-<ol>
-<li>
-<p>需求评审：</p>
-<p>理解业务是第一要义，在梳理清楚需求点以及交互后，可以尝试做下面的事情（挑重点需求，毕竟没那么多时间）：思考如果是自己来设计技术方案该怎么做（包含不限于 ① 主流程的时序图 ② 涉及的接口，每个接口要处理的核心逻辑以及用到的中间件 ③ 会有哪些异常场景 ④ 自己的方案可能会产生或者无法解决什么问题）。</p>
-<p>我认为这个过程很有帮助：1）主动思考后产生的想法和问题，会让后面的技术评审、用例编写等环节更充分有效，不会变成 QA/RD 一方的表演，会碰撞出很多隐藏问题 2）不断提升自己的技术能力与业务理解，一方面可以发现更多系统设计上的缺陷 提升代码质量，另一方面大部分的测试平台会使用与业务一致的技术栈，在平台开发时更加得心应手 3）与研发可以平等交流，增进信任度。很多业务线研发认为 QA 只会点点点，往往并不愿意与 QA 进行很深入的交流，QA 在推动质量专项时也会很被动</p>
-</li>
-<li>
-<p>技术评审：</p>
-<p>在这个环节 QA 需要搞定这几件事：1）熟悉 RD 的技术方案，先看技术方案完备度（应该有一个技术方案模板） 2）主流程是否遗漏或存在逻辑漏洞 3）结合自己此前的思考，将疑问与 RD 交流</p>
-</li>
-<li>
-<p>用例编写：</p>
-<p>我一般写服务端测试用例的思路是：</p>
-<ol>
-<li>【新】依照时序图，将一个完整流程按拆分为独立的多个独立模块/接口</li>
-<li>【新】对于每个模块/接口，列出接口文档、接口核心改动逻辑、数据存储&amp;中间件校验点以及异常场景，标注优先级</li>
-<li>【回归】反模式补充：结合之前踩过的坑以及线上问题，补充 case</li>
-<li>【回归】主流程：结合测试模板，加入主流程的回归 case</li>
-<li>在这个过程中，如果对技术方案或者需求有些疑问，阻塞的即使沟通，不阻塞的在用例评审时沟通</li>
-<li>脑海里提前过一遍测试可能遇到的可测性问题，给一个初版解决方案</li>
-</ol>
-</li>
-<li>
-<p>用例评审：</p>
-<p>提前发出自己的用例，评审时 P0/P1 逐条过，P2/P3 如果太多可以简要过（毕竟精力有限，如果上百条无关紧要的 case 也要挨个念，RD 可能会抓不到重点），将自己的疑问都沟通明白</p>
-<p>（这里留个疑问：在字节的时候大家都很忙，用例评审经常就是走个流程，直到出了事故复盘时才发现遗漏了一些 case，如何提升用例评审的效果和参与度？）</p>
-</li>
-<li>
-<p>准入：这没啥说的，按照准入标准（自动化、冒烟用例、静态扫描、FTF）缺一不可</p>
-</li>
-</ol>
-<h3 id="测试中" tabindex="-1"><a class="header-anchor" href="#测试中"><span>测试中：</span></a></h3>
-<p>依照测试用例严格执行（测试 Case 需要有明确的校验点和可执行性），测试过程中可能用到的方法：</p>
-<ul>
-<li>postman、charles 等接口工具，也有 rpc 转 http 的工具</li>
-<li>代码 debug</li>
-<li>Mock 数据（上下游、系统内、第三方）</li>
-<li>端到端测试</li>
-<li>日志分析</li>
-<li>代码覆盖率</li>
-<li>使用各种中间件工具（DB、MQ、Cache、ES……）</li>
-</ul>
-<h3 id="测试后" tabindex="-1"><a class="header-anchor" href="#测试后"><span>测试后</span></a></h3>
-<ol>
-<li>
-<p>准出：</p>
-<p>自动化+FTF+行覆盖率+代码扫描+缺陷修复率+用例执行率+是否通过代码 review</p>
-</li>
-<li>
-<p>上线：</p>
-<p>分级发布，观察日志，及时回归</p>
-</li>
-<li>
-<p>补充核心功能自动化用例、压测…</p>
-</li>
-</ol>
-<h2 id="qa-常用的工具-平台" tabindex="-1"><a class="header-anchor" href="#qa-常用的工具-平台"><span>QA 常用的工具/平台</span></a></h2>
+<h2 id="二、常用的工具-平台" tabindex="-1"><a class="header-anchor" href="#二、常用的工具-平台"><span>二、常用的工具/平台</span></a></h2>
 <ul>
 <li>抓包工具：Charles/Fiddler</li>
 <li>泛接口自动化：testNG/pytest/robotFramework</li>
@@ -138,47 +78,80 @@
 <li>服务治理：OCTO</li>
 <li>CICD：Jenkins/devops</li>
 </ul>
-<h2 id="qa-专项" tabindex="-1"><a class="header-anchor" href="#qa-专项"><span>QA 专项</span></a></h2>
-<h3 id="质量预防" tabindex="-1"><a class="header-anchor" href="#质量预防"><span>质量预防</span></a></h3>
+<h2 id="三、服务端专项" tabindex="-1"><a class="header-anchor" href="#三、服务端专项"><span>三、服务端专项</span></a></h2>
+<Tabs id="221" :data='[{"id":"接口自动化"},{"id":"性能测试"},{"id":"监控告警治理"},{"id":"资损防控"},{"id":"故障演练"},{"id":"质量内建"}]'>
+<template #title0="{ value, isActive }">接口自动化</template>
+<template #title1="{ value, isActive }">性能测试</template>
+<template #title2="{ value, isActive }">监控告警治理</template>
+<template #title3="{ value, isActive }">资损防控</template>
+<template #title4="{ value, isActive }">故障演练</template>
+<template #title5="{ value, isActive }">质量内建</template>
+<template #tab0="{ value, isActive }">
+<p>接口级巡检&amp;回归测试，提升效率，保障核心功能</p>
+<p>See Detail <a href="https://swtywang.fun/posts/QA/08%20%E6%B5%8B%E8%AF%95%E4%B8%93%E9%A1%B9%20-%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95.html" target="_blank" rel="noopener noreferrer">接口自动化</a></p>
+</template>
+<template #tab1="{ value, isActive }">
+<p>评估系统的能力、识别性能瓶颈并改进，确保性能符合预期</p>
+<p>See Detail <a href="http://localhost:8080/posts/QA/09%20%E6%B5%8B%E8%AF%95%E4%B8%93%E9%A1%B9%20-%20%E5%85%A8%E9%93%BE%E8%B7%AF%E5%8E%8B%E6%B5%8B%E4%B8%8E%E6%95%85%E9%9A%9C%E6%BC%94%E7%BB%83.html" target="_blank" rel="noopener noreferrer">全链路压测</a></p>
+</template>
+<template #tab2="{ value, isActive }">
+<p>快速发现响应线上问题，降低 MTTR 时间，为质量兜底</p>
+<p>See Detail <a href="https://swtywang.fun/posts/QA/07%20%E6%B5%8B%E8%AF%95%E4%B8%93%E9%A1%B9%20-%20%E7%9B%91%E6%8E%A7%E6%B2%BB%E7%90%86%E3%80%81%E5%BC%BA%E5%BC%B1%E4%BE%9D%E8%B5%96%E6%B2%BB%E7%90%86.html" target="_blank" rel="noopener noreferrer">监控治理</a></p>
+</template>
+<template #tab3="{ value, isActive }">
+<p>See Detail <a href="http://swtywang.fun/posts/QA/05%20%E6%B5%8B%E8%AF%95%E4%B8%93%E9%A1%B9%20-%20%E8%B5%84%E6%8D%9F%E9%98%B2%E6%8E%A7.html" target="_blank" rel="noopener noreferrer">资损防控</a></p>
+</template>
+<template #tab4="{ value, isActive }">
+<p>模拟线上可能出现的故障场景，提升系统稳定性</p>
+<p>See Detail <a href="https://swtywang.fun/posts/%E8%BF%90%E7%BB%B4/00%20%E6%B7%B7%E6%B2%8C%E5%B7%A5%E7%A8%8B.html" target="_blank" rel="noopener noreferrer">故障演练</a></p>
+</template>
+<template #tab5="{ value, isActive }">
+<p>将质量保证活动融入到整个开发过程中，确保每个环节都产出高质量的成果</p>
+<p>See Detail <a href="https://swtywang.fun/posts/QA/06%20%E6%B5%8B%E8%AF%95%E4%B8%93%E9%A1%B9%20-%20%E8%B4%A8%E9%87%8F%E5%86%85%E5%BB%BA.html" target="_blank" rel="noopener noreferrer">质量内建</a></p>
+</template>
+</Tabs>
+<h2 id="四、测试关注点" tabindex="-1"><a class="header-anchor" href="#四、测试关注点"><span>四、测试关注点</span></a></h2>
+<h3 id="_4-1-幂等性" tabindex="-1"><a class="header-anchor" href="#_4-1-幂等性"><span>4.1 幂等性</span></a></h3>
+<p>幂等意味着多次执行所产生的影响和一次执行的影响相同，多见于写操作场景。比如对同一笔订单，收到一次支付回调和多次应该是一致的。</p>
+<h4 id="技术手段如何保证幂等性" tabindex="-1"><a class="header-anchor" href="#技术手段如何保证幂等性"><span>技术手段如何保证幂等性？</span></a></h4>
+<ol>
+<li>分布式锁
 <ul>
-<li>目标：提升研发过程质量（代码规范度与代码质量、CR 质量与技术方案质量等）</li>
-</ul>
-<h3 id="自动化测试" tabindex="-1"><a class="header-anchor" href="#自动化测试"><span>自动化测试</span></a></h3>
+<li>乐观锁（冲突概率不高，一旦冲突就报错，让用户决定）
 <ul>
-<li>目标：巡检 + 提效</li>
+<li>版本号机制：select + version （支付退款场景会使用，适用于重复写不多的情况）</li>
+<li>CAS：通过 compare and set 原子操作实现（ABA 不适用）</li>
 </ul>
-<h3 id="性能测试" tabindex="-1"><a class="header-anchor" href="#性能测试"><span>性能测试</span></a></h3>
-<ul>
-<li>目标：评估系统的能力、识别性能瓶颈并改进，确保性能符合预期</li>
+</li>
+<li>数据库加行锁 表锁</li>
+<li>数据库加唯一索引</li>
+<li>Redis 实现分布式锁</li>
 </ul>
-<h3 id="监控告警治理" tabindex="-1"><a class="header-anchor" href="#监控告警治理"><span>监控告警治理</span></a></h3>
-<ul>
-<li>目标：快速发现响应线上问题，MTTR 时间低于 xxx</li>
-</ul>
-<h3 id="资损防控" tabindex="-1"><a class="header-anchor" href="#资损防控"><span>资损防控</span></a></h3>
-<ul>
-<li>目标：针对有支付场景的业务，建立资损防控保障体系，避免资损事故</li>
-</ul>
-<h3 id="故障演练" tabindex="-1"><a class="header-anchor" href="#故障演练"><span>故障演练</span></a></h3>
-<ul>
-<li>目标：模拟线上可能出现的故障场景，提升系统稳定性</li>
-</ul>
-<h3 id="质量度量与运营" tabindex="-1"><a class="header-anchor" href="#质量度量与运营"><span>质量度量与运营</span></a></h3>
-<ul>
-<li>版本度量运营</li>
-<li>事故复盘与改进</li>
-<li>其他专项中的度量运营</li>
-</ul>
-<h3 id="其他" tabindex="-1"><a class="header-anchor" href="#其他"><span>其他</span></a></h3>
-<p>其他诸如变更管控等专项还有很多，需要根据业务线的质量现状与目标做相应的应对措施。</p>
-<h2 id="懂代码更好测" tabindex="-1"><a class="header-anchor" href="#懂代码更好测"><span>懂代码更好测</span></a></h2>
-<p>&quot;代码变更&quot;是线上故障的主要归因，也是服务端 QA 关注的重点。服务端 QA 是需要投入一定的时间熟悉核心功能的代码实现，掌握梳理调用链路。虽然前期来看这是一件 ROI 较低的事情，但是长期来看很有帮助（个人看法）：</p>
+</li>
+<li>唯一业务单号：例如支付系统就是支付流水号 payNo</li>
+</ol>
+<h4 id="如何测试幂等" tabindex="-1"><a class="header-anchor" href="#如何测试幂等"><span>如何测试幂等？</span></a></h4>
+<p>1.在需求评审以及技术方案评审阶段，识别出需要实现幂等的接口，check 是否实现。（通常是写接口，比如发券，支付通知，支付提交等等） 2.可以借助 charles、多次调用接口等方式测试，提升效率 3.测试前应梳理出两条链路：第一条是首次执行时候的数据链路；第二条是多次调用的数据链路，check 是否符合预期</p>
+<h3 id="_4-2-逻辑兼容性" tabindex="-1"><a class="header-anchor" href="#_4-2-逻辑兼容性"><span>4.2 逻辑兼容性</span></a></h3>
+<h4 id="case1-改动已有功能前后端交互逻辑-需要考虑新老版本用户是否兼容" tabindex="-1"><a class="header-anchor" href="#case1-改动已有功能前后端交互逻辑-需要考虑新老版本用户是否兼容"><span>Case1. 改动已有功能前后端交互逻辑，需要考虑新老版本用户是否兼容</span></a></h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>章节自动购买逻辑判断</span></span>
+<span class="line"><span>   1. 老版本：自动购买状态存储在 user_book 表，当用户没有设置自动购买时，分销商用户默认自动购买，自然量用户不自动购买</span></span>
+<span class="line"><span>   2. 新版本：自动购买状态改存在 user_attr 表，兜底逻辑没变</span></span>
+<span class="line"><span>   3. 这样的话，老版本用户在 user_attr 表的状态都没有，所以都进入了兜底逻辑，不符合预期</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="case-2-在原有接口做的改动-改动已有字段的判断-取数-写入逻辑-这个时候一定要梳理清楚该字段的数据链路-否则会留坑" tabindex="-1"><a class="header-anchor" href="#case-2-在原有接口做的改动-改动已有字段的判断-取数-写入逻辑-这个时候一定要梳理清楚该字段的数据链路-否则会留坑"><span>Case 2. 在原有接口做的改动，改动已有字段的判断/取数/写入逻辑：这个时候一定要梳理清楚该字段的数据链路，否则会留坑</span></a></h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>- 某次需求增加了对 templatedId 非空的校验，导致部分不需要传该字段的下单场景失败</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- 存储在extra字段中device字段的类型（写入时），但是并没有修改读该字段的场景，导致读取的device_id都是0，订单归属异常</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="case-3-如果活动生效时间不是上线时间-需要在真实生效时间观察-例如-1-月-1-日晚-20-点上线了新代码-但是活动是在-1-月-5-日早-10-点生效-那么需要在这两个时间都留意线上监控情况" tabindex="-1"><a class="header-anchor" href="#case-3-如果活动生效时间不是上线时间-需要在真实生效时间观察-例如-1-月-1-日晚-20-点上线了新代码-但是活动是在-1-月-5-日早-10-点生效-那么需要在这两个时间都留意线上监控情况"><span>Case 3. 如果活动生效时间不是上线时间，需要在真实生效时间观察：例如 1 月 1 日晚 20 点上线了新代码，但是活动是在 1 月 5 日早 10 点生效，那么需要在这两个时间都留意线上监控情况</span></a></h4>
+<h4 id="case4-测试代码兼容性" tabindex="-1"><a class="header-anchor" href="#case4-测试代码兼容性"><span>Case4. 测试代码兼容性</span></a></h4>
+<h2 id="五、熟悉代码" tabindex="-1"><a class="header-anchor" href="#五、熟悉代码"><span>五、熟悉代码</span></a></h2>
+<p>&quot;代码变更&quot;是线上故障的主要归因，也是服务端 QA 关注重点，因此有必要投入时间熟悉核心功能的代码实现，掌握梳理调用链路。虽然前期来看这是一件 ROI 较低的事情，但是长期来看很有帮助：</p>
 <ul>
 <li>
 <p>并没有想象中花费时间：</p>
 <ul>
-<li>首先，业务真正核心的接口并不多，并且复杂需求大多围绕核心接口做功能扩展或者改造（以支付系统为例，80%的需求都集中在&quot;预支付&quot;、&quot;提交支付&quot;、&quot;退款&quot;这几个接口上）。所以从梳理成本上看，是属于前期投入较高，后面会越来越轻松，如果已有梳理好的文档更是事半功倍。 PS：核心接口一般是 C 端调用的 HTTP 请求，按调用量排序取 TopN。</li>
-<li>其次，我们并不需要记住每一行代码，重点关注&quot;系统间&amp;第三方 API 调用&quot;、&quot;数据&amp;缓存读取/写入&quot;以及一些特殊实现。</li>
+<li>首先，业务真正核心的接口不多，并且复杂需求大多围绕核心接口做功能扩展或者改造（以支付系统为例，80%的需求都集中在&quot;预支付&quot;、&quot;提交支付&quot;、&quot;退款&quot;这几个接口上）。所以从梳理成本上看，是属于前期投入较高，后面会越来越轻松，如果已有梳理好的文档更是事半功倍。 PS：核心接口一般是 C 端调用的 HTTP 请求，按调用量排序取 TopN。</li>
+<li>并不需要记住每一行代码，重点关注&quot;系统间&amp;第三方 API 调用&quot;、&quot;数据&amp;缓存读取/写入&quot;以及一些特殊实现。</li>
 </ul>
 </li>
 <li>
@@ -198,8 +171,6 @@
 <p>QA 在完成业务测试之余，通常还会做一些平台开发的工作，通常会使用与业务相同的技术栈，多学习 RD 代码也对自己写代码很有帮助。</p>
 </li>
 </ul>
-<p>【有道云笔记】服务端测试总结<br>
-<a href="https://note.youdao.com/s/4PAfl5Cq" target="_blank" rel="noopener noreferrer">https://note.youdao.com/s/4PAfl5Cq</a></p>
 </div></template>
 
 
